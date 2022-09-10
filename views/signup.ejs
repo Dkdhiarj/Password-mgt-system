@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
+    <link rel="stylesheet" href="/stylesheets/style.css" type="text/css" />
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      <!-- <script>
+         function changeHandler(e){
+             e.preventDefault()
+             document.getElementById("1").type="text"
+         }
+      </script> -->
+    <u><h2 class="text-center"><%= title %></h2></u>
+    <div class="container">
+      <div class="row">
+          <div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+              <div class="panel panel-info">
+                  <div class="panel-heading">
+                      <div class="panel-title">Signup</div> 
+                       </div>  
+                  <div class="panel-body" >
+                     <% if(msg != ''){ %>
+                        <p style="text-align: center"><%= msg %></p>
+                        <% } %> 
+          
+                      <form action="/signup" id="PmsForm" class="form-horizontal" method="post" >
+                          
+                          <div id="signupalert" style="display:none" class="alert alert-danger">
+                              <p>Error:</p>
+                              <span></span>
+                          </div>
+                              
+                          <div class="form-group">
+                              <label for="username" class="col-md-3 control-label">User Name</label>
+                              <div class="col-md-9">
+                                  <input type="text" class="form-control" name="uname" autofocus required placeholder="Enter Your UserName">
+                              </div>
+                          </div>
+                                                     
+                          <div class="form-group">
+                            <label for="email" class="col-md-3 control-label">Email</label>
+                            <div class="col-md-9">
+                                <input type="email" class="form-control" name="email" required placeholder="Enter Your email">
+                            </div>
+                        </div>
+
+                          <div class="form-group">
+                              <label for="password" class="col-md-3 control-label">Password</label>
+                              <div class="col-md-9">
+                                  <input type="password" class="form-control" name="password" required placeholder="Enter Your Password" id="1" >
+                                  <!-- <button onclick="changeHandler(e)">click</button></input> -->
+                              </div>
+                          </div>
+
+                          <div class="form-group">
+                            <label for="confpassword" class="col-md-3 control-label">Confirm Password</label>
+                            <div class="col-md-9">
+                                <input type="password" class="form-control" name="confpassword" required placeholder="Confirm Password">
+                                
+                            </div>
+                        </div>
+
+                          <div class="form-group">
+                              <!-- Button -->                                        
+                              <div class="col-md-offset-3 col-md-9">
+                              <input type="submit" name="submit" value="Signup" class="btn btn-primary">   
+                              </div>
+                          </div>
+                              
+                          <p>If you already have an account!! <br> <a href="/"> Login here</a></p>  
+                      </form>
+                   </div>
+              </div>
+  </body>
+</html>
